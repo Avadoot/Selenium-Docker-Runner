@@ -4,7 +4,7 @@ pipeline{
 	stages{
 		stage('Run Test'){
 			steps{
-				bat "docker-compose up"
+				bat "docker-compose up --no-colors"
 			}
 		}
 		stage('Bring Grid Down'){
