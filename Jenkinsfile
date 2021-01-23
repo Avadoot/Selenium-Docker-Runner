@@ -21,6 +21,16 @@ pipeline{
 	post{
 		always{
 			archiveArtifacts artifacts:'output/**'
+
+			publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
+            reportFiles: 'index.html',
+            reportName: 'RCov Report'
+            ]
+
 			bat "docker-compose down"
 		}
 	}
