@@ -1,5 +1,6 @@
+
 pipeline{
-	agaent any
+	agent any
 	stages{
 		stage('Run Test'){
 			steps{
