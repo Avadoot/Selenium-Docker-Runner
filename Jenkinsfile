@@ -17,9 +17,6 @@ pipeline{
 				bat "docker-compose up search-module book-flight-module"
 			}
 		}
-		stage('Publishing TestNG Result'){
-		    step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
-		}
 	}
 	post{
 		always{
